@@ -16,6 +16,8 @@ class AppBarAndTextField extends StatefulWidget {
 
   final TextStyle? labelStyle;
 
+  final TextStyle? titleStyle;
+
   final TextStyle? hintStyle;
 
   final TextStyle? cancelButtonTextStyle;
@@ -36,6 +38,10 @@ class AppBarAndTextField extends StatefulWidget {
 
   final ValueChanged<String>? onChanged;
 
+  final String? title;
+
+  final Widget? appBar;
+
   const AppBarAndTextField({
     Key? key,
     this.radius = 10,
@@ -54,6 +60,9 @@ class AppBarAndTextField extends StatefulWidget {
     this.hintText,
     this.decoration,
     this.onChanged,
+    this.title,
+    this.appBar,
+    this.titleStyle,
   }) : super(key: key);
 
   @override

@@ -16,11 +16,11 @@ class AppBarAndTextFieldView extends SearchAppBarViewModel {
           AnimatedSize(
             key: const ValueKey('animatedSizeSearchAppBar1'),
             duration: widget.duration ?? const Duration(milliseconds: 200),
-            child: AppBar(
+            child: widget.appBar ?? AppBar(
               elevation: 0,
               title: Text(
-                'Search',
-                style: widget.labelStyle ??
+                widget.title ?? 'Search',
+                style: widget.titleStyle ??
                     Theme.of(context).inputDecorationTheme.labelStyle,
               ),
             )._isVisible(showAppBar && !showClearBtn),
@@ -44,46 +44,53 @@ class AppBarAndTextFieldView extends SearchAppBarViewModel {
                       controller: cSearch,
                       focusNode: searchFocusNode,
                       onChanged: widget.onChanged,
-                      decoration: widget.decoration ?? InputDecoration(
-                        hintText: widget.hintText ?? 'Ara',
-                        hintStyle: widget.hintStyle ??
-                            Theme.of(context).inputDecorationTheme.hintStyle,
-                        fillColor: Colors.white,
-                        filled: true,
-                        prefixIcon: widget.prefixIcon ??
-                            Icon(
-                              Icons.search,
-                              color: widget.iconColor,
-                            ),
-                        suffixIcon: widget.suffixIcon ??
-                            IconButton(
-                              icon: Icon(
-                                CupertinoIcons.clear_circled_solid,
-                                color: widget.clearIconColor ??
-                                    const Color(0xffBFBFC1),
+                      decoration: widget.decoration ??
+                          InputDecoration(
+                            hintText: widget.hintText,
+                            hintStyle: widget.hintStyle ??
+                                Theme.of(context)
+                                    .inputDecorationTheme
+                                    .hintStyle,
+                            labelStyle: widget.labelStyle ??
+                                Theme.of(context)
+                                    .inputDecorationTheme
+                                    .labelStyle,
+                            fillColor: Colors.white,
+                            filled: true,
+                            prefixIcon: widget.prefixIcon ??
+                                Icon(
+                                  Icons.search,
+                                  color: widget.iconColor,
+                                ),
+                            suffixIcon: widget.suffixIcon ??
+                                IconButton(
+                                  icon: Icon(
+                                    CupertinoIcons.clear_circled_solid,
+                                    color: widget.clearIconColor ??
+                                        const Color(0xffBFBFC1),
+                                  ),
+                                  onPressed: onTapClearBtn,
+                                )._isVisible(showClearBtn),
+                            contentPadding: EdgeInsets.zero,
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: const BorderSide(
+                                color: Colors.transparent,
+                                width: 0,
                               ),
-                              onPressed: onTapClearBtn,
-                            )._isVisible(showClearBtn),
-                        contentPadding: EdgeInsets.zero,
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(
-                            color: Colors.transparent,
-                            width: 0,
+                              borderRadius: BorderRadius.circular(
+                                6,
+                              ),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: const BorderSide(
+                                color: Colors.transparent,
+                                width: 0,
+                              ),
+                              borderRadius: BorderRadius.circular(
+                                6,
+                              ),
+                            ),
                           ),
-                          borderRadius: BorderRadius.circular(
-                            6,
-                          ),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(
-                            color: Colors.transparent,
-                            width: 0,
-                          ),
-                          borderRadius: BorderRadius.circular(
-                            6,
-                          ),
-                        ),
-                      ),
                     ),
                   ),
                   AnimatedSize(
