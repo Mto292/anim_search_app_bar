@@ -34,6 +34,8 @@ class AppBarAndTextField extends StatefulWidget {
 
   final InputDecoration? decoration;
 
+  final ValueChanged<String>? onChanged;
+
   const AppBarAndTextField({
     Key? key,
     this.radius = 10,
@@ -51,6 +53,7 @@ class AppBarAndTextField extends StatefulWidget {
     this.cancelButtonText,
     this.hintText,
     this.decoration,
+    this.onChanged,
   }) : super(key: key);
 
   @override

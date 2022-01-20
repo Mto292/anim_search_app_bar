@@ -43,6 +43,7 @@ class AppBarAndTextFieldView extends SearchAppBarViewModel {
                     child: TextFormField(
                       controller: cSearch,
                       focusNode: searchFocusNode,
+                      onChanged: widget.onChanged,
                       decoration: widget.decoration ?? InputDecoration(
                         hintText: widget.hintText ?? 'Ara',
                         hintStyle: widget.hintStyle ??
