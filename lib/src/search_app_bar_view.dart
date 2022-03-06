@@ -9,6 +9,15 @@ class AppBarAndTextFieldView extends SearchAppBarViewModel {
         Theme.of(context).appBarTheme.backgroundColor ??
         Theme.of(context).colorScheme.primary;
 
+    final Widget _appBar = widget.appBar ?? AppBar(
+      elevation: 0,
+      title: Text(
+        widget.title ?? 'Search',
+        style: widget.titleStyle ??
+            Theme.of(context).inputDecorationTheme.labelStyle,
+      ),
+    );
+
     return Material(
       color: backgroundColor,
       child: Column(
@@ -16,14 +25,7 @@ class AppBarAndTextFieldView extends SearchAppBarViewModel {
           AnimatedSize(
             key: const ValueKey('animatedSizeSearchAppBar1'),
             duration: widget.duration ?? const Duration(milliseconds: 200),
-            child: widget.appBar ?? AppBar(
-              elevation: 0,
-              title: Text(
-                widget.title ?? 'Search',
-                style: widget.titleStyle ??
-                    Theme.of(context).inputDecorationTheme.labelStyle,
-              ),
-            )._isVisible(showAppBar && !showClearBtn),
+            child: _appBar._isVisible(showAppBar && !showClearBtn),
           ),
           AnimatedSize(
             key: const ValueKey('animatedSizeSearchAppBar2'),
