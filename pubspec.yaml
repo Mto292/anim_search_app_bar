@@ -1,7 +1,7 @@
 name: search_app_bar
 description: A flutter package that has an animated search bar with loads of customization
 version: 1.0.0
-homepage:
+homepage: https://github.com/Mto292/search_app_bar.git
 
 
 environment:
