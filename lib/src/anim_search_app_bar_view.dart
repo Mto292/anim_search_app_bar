@@ -104,7 +104,7 @@ class AnimSearchAppBarView extends AnimSearchAppBarViewModel {
                     child: TextButton(
                       onPressed: onTapCancelBtn,
                       child: Text(
-                        widget.cancelButtonText ?? 'Vazgeç',
+                        widget.cancelButtonText ?? 'Cancel',
                         style: widget.cancelButtonTextStyle ??
                             const TextStyle(
                               fontSize: 16,

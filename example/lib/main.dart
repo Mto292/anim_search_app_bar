@@ -43,7 +43,10 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: Column(
         children: [
-          const AnimSearchAppBar(),
+          const AnimSearchAppBar(
+            cancelButtonText: "Cancel",
+            hintText: 'Search',
+          ),
           Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
