@@ -21,6 +21,7 @@ class AppBarAndTextFieldView extends SearchAppBarViewModel {
     return Material(
       color: backgroundColor,
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
           AnimatedSize(
             key: const ValueKey('animatedSizeSearchAppBar1'),
