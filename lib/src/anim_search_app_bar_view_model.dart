@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:search_app_bar/src/search_app_bar.dart';
 
-abstract class SearchAppBarViewModel extends State<AppBarAndTextField> {
+import '../anim_search_app_bar.dart';
+
+abstract class AnimSearchAppBarViewModel extends State<AnimSearchAppBar> {
   late final FocusNode searchFocusNode;
   late final TextEditingController cSearch;
   late bool showAppBar = true;

@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:search_app_bar/src/search_app_bar_view_model.dart';
 
-class AppBarAndTextFieldView extends SearchAppBarViewModel {
+import 'anim_search_app_bar_view_model.dart';
+
+class AnimSearchAppBarView extends AnimSearchAppBarViewModel {
   @override
   Widget build(BuildContext context) {
     final backgroundColor = widget.backgroundColor ??

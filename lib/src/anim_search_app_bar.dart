@@ -1,9 +1,10 @@
 import 'dart:core';
 
 import 'package:flutter/material.dart';
-import 'package:search_app_bar/src/search_app_bar_view.dart';
 
-class AppBarAndTextField extends StatefulWidget {
+import 'anim_search_app_bar_view.dart';
+
+class AnimSearchAppBar extends StatefulWidget {
   final double radius;
 
   final TextEditingController? cSearch;
@@ -42,7 +43,7 @@ class AppBarAndTextField extends StatefulWidget {
 
   final Widget? appBar;
 
-  const AppBarAndTextField({
+  const AnimSearchAppBar({
     Key? key,
     this.radius = 10,
     this.cSearch,
@@ -66,5 +67,5 @@ class AppBarAndTextField extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<AppBarAndTextField> createState() => AppBarAndTextFieldView();
+  State<AnimSearchAppBar> createState() => AnimSearchAppBarView();
 }

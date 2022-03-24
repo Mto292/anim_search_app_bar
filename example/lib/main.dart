@@ -1,5 +1,5 @@
+import 'package:anim_search_app_bar/anim_search_app_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:search_app_bar/search_app_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: Column(
         children: [
-          const AppBarAndTextField(),
+          const AnimSearchAppBar(),
           Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
