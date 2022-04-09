@@ -1,27 +1,45 @@
-# search_app_bar
+# anim_search_app_bar
 
 An animated SearchAppBar Widget, to be used with Flutter.
 
-## Features
+![](demo.gif)
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Website example >> https://animsearchappbar.mustafaturkmen.dev
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+It has a very easy to use
 
 ```dart
-const like = 'sample';
+const AnimSearchAppBar(
+  cancelButtonText: "Cancel",
+  hintText: 'Search',
+),
 ```
 
-## Additional information
+## Complete Example
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+```dart
+class SearchScreen extends StatelessWidget {
+  const SearchScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          AnimSearchAppBar(
+            cancelButtonText: "Cancel",
+            hintText: 'Search for Neighborhood, Street or avenue',
+            cSearch: controller.cSearch,
+            appBar: const PBAppBar(
+              title: 'Search',
+            ),
+          ),
+          const Expanded(child: SearchView()),
+        ],
+      ),
+    );
+  }
+}
+```
