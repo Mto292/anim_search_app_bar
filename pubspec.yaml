@@ -1,6 +1,6 @@
 name: anim_search_app_bar
 description: A flutter package that has an animated search bar with loads of customization
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/Mto292/search_app_bar.git
 
 
@@ -15,6 +15,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^1.0.0
+  flutter_lints: any
 
 flutter:

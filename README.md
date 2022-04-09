@@ -38,7 +38,9 @@ const AnimSearchAppBar(
 
 ```dart
 class SearchScreen extends StatelessWidget {
-  const SearchScreen({Key? key}) : super(key: key);
+  final TextEditingController searchController = TextEditingController();
+  
+  SearchScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +50,7 @@ class SearchScreen extends StatelessWidget {
           AnimSearchAppBar(
             cancelButtonText: "Cancel",
             hintText: 'Search for Neighborhood, Street or avenue',
-            cSearch: controller.cSearch,
+            cSearch: searchController,
             appBar: const PBAppBar(
               title: 'Search',
             ),
