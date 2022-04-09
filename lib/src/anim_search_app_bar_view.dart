@@ -10,14 +10,15 @@ class AnimSearchAppBarView extends AnimSearchAppBarViewModel {
         Theme.of(context).appBarTheme.backgroundColor ??
         Theme.of(context).colorScheme.primary;
 
-    final Widget _appBar = widget.appBar ?? AppBar(
-      elevation: 0,
-      title: Text(
-        widget.title ?? 'Search',
-        style: widget.titleStyle ??
-            Theme.of(context).inputDecorationTheme.labelStyle,
-      ),
-    );
+    final Widget _appBar = widget.appBar ??
+        AppBar(
+          elevation: 0,
+          title: Text(
+            widget.title ?? 'Search',
+            style: widget.titleStyle ??
+                Theme.of(context).inputDecorationTheme.labelStyle,
+          ),
+        );
 
     return Material(
       color: backgroundColor,
