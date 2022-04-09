@@ -8,7 +8,24 @@ Website example >> https://animsearchappbar.mustafaturkmen.dev
 
 ## Usage
 
-It has a very easy to use
+It has a very easy to use.
+
+add this line to pubspec.yaml
+
+```yaml
+
+   dependencies:
+     anim_search_app_bar: ^1.0.0
+
+```
+
+import package
+
+```dart
+
+   import 'package:anim_search_app_bar/anim_search_app_bar.dart';
+
+```
 
 ```dart
 const AnimSearchAppBar(
