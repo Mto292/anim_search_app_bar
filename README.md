@@ -4,8 +4,7 @@ An animated SearchAppBar Widget, to be used with Flutter.
 
 Website example >> https://animsearchappbar.mustafaturkmen.dev
 
-
-![](demo.gif)
+![demo](https://user-images.githubusercontent.com/49743631/164681568-710f4794-aaa5-4428-8fbc-135b00dc29ef.gif)
 
 ## Usage
 
