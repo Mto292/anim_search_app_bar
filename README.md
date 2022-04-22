@@ -15,7 +15,7 @@ add this line to pubspec.yaml
 ```yaml
 
    dependencies:
-     anim_search_app_bar: ^1.0.1
+     anim_search_app_bar: ^1.0.2
 
 ```
 
