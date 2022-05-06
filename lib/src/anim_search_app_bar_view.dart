@@ -15,8 +15,7 @@ class AnimSearchAppBarView extends AnimSearchAppBarViewModel {
           elevation: 0,
           title: Text(
             widget.title ?? 'Search',
-            style: widget.titleStyle ??
-                Theme.of(context).inputDecorationTheme.labelStyle,
+            style: widget.titleStyle ?? Theme.of(context).inputDecorationTheme.labelStyle,
           ),
         );
 
@@ -49,17 +48,15 @@ class AnimSearchAppBarView extends AnimSearchAppBarViewModel {
                       controller: cSearch,
                       focusNode: searchFocusNode,
                       onChanged: widget.onChanged,
+                      keyboardType: widget.keyboardType,
+                      textCapitalization: widget.textCapitalization,
+                      textInputAction: widget.textInputAction,
+                      onFieldSubmitted: widget.onFieldSubmitted,
                       decoration: widget.decoration ??
                           InputDecoration(
                             hintText: widget.hintText,
-                            hintStyle: widget.hintStyle ??
-                                Theme.of(context)
-                                    .inputDecorationTheme
-                                    .hintStyle,
-                            labelStyle: widget.labelStyle ??
-                                Theme.of(context)
-                                    .inputDecorationTheme
-                                    .labelStyle,
+                            hintStyle: widget.hintStyle ?? Theme.of(context).inputDecorationTheme.hintStyle,
+                            labelStyle: widget.labelStyle ?? Theme.of(context).inputDecorationTheme.labelStyle,
                             fillColor: Colors.white,
                             filled: true,
                             prefixIcon: widget.prefixIcon ??
@@ -71,8 +68,7 @@ class AnimSearchAppBarView extends AnimSearchAppBarViewModel {
                                 IconButton(
                                   icon: Icon(
                                     CupertinoIcons.clear_circled_solid,
-                                    color: widget.clearIconColor ??
-                                        const Color(0xffBFBFC1),
+                                    color: widget.clearIconColor ?? const Color(0xffBFBFC1),
                                   ),
                                   onPressed: onTapClearBtn,
                                 )._isVisible(showClearBtn),
@@ -100,8 +96,7 @@ class AnimSearchAppBarView extends AnimSearchAppBarViewModel {
                   ),
                   AnimatedSize(
                     key: const ValueKey('animatedSizeSearchAppBar3'),
-                    duration:
-                        widget.duration ?? const Duration(milliseconds: 200),
+                    duration: widget.duration ?? const Duration(milliseconds: 200),
                     child: TextButton(
                       onPressed: onTapCancelBtn,
                       child: Text(

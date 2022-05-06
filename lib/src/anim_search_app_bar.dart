@@ -43,6 +43,14 @@ class AnimSearchAppBar extends StatefulWidget {
 
   final Widget? appBar;
 
+  final TextInputType? keyboardType;
+
+  final TextCapitalization textCapitalization;
+
+  final TextInputAction? textInputAction;
+
+  final ValueChanged<String>? onFieldSubmitted;
+
   const AnimSearchAppBar({
     Key? key,
     this.radius = 10,
@@ -64,6 +72,10 @@ class AnimSearchAppBar extends StatefulWidget {
     this.title,
     this.appBar,
     this.titleStyle,
+    this.keyboardType,
+    this.textCapitalization = TextCapitalization.none,
+    this.textInputAction,
+    this.onFieldSubmitted,
   }) : super(key: key);
 
   @override
